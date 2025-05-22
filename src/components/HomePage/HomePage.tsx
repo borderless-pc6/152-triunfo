@@ -1,7 +1,15 @@
-import React from "react";
-import "./HomePage.css";
+import React, { useState } from "react"
+import ClientePage from "../ClientePage/ClientePage"
+import OsPage from "../OsPage/OsPage"
+import FinancePage from "../FinancePage/FinancePage"
+import Modal from "./Modal"
+import "./HomePage.css"
 
 const HomePage: React.FC = () => {
+  const [isClientModalOpen, setClientModalOpen] = useState(false)
+  const [isOsModalOpen, setOsModalOpen] = useState(false)
+  const [isFinanceModalOpen, setFinanceModalOpen] = useState(false)
+
   return (
     <div className="homepage-container">
       <header className="homepage-header">
@@ -15,15 +23,24 @@ const HomePage: React.FC = () => {
         </div>
 
         <nav className="homepage-nav">
-          <a href="#" className="homepage-nav-link">
+          <button
+            onClick={() => setClientModalOpen(true)}
+            className="homepage-nav-link"
+          >
             Clientes
-          </a>
-          <a href="#" className="homepage-nav-link">
+          </button>
+          <button
+            onClick={() => setOsModalOpen(true)}
+            className="homepage-nav-link"
+          >
             Ordens de Serviço
-          </a>
-          <a href="#" className="homepage-nav-link">
+          </button>
+          <button
+            onClick={() => setFinanceModalOpen(true)}
+            className="homepage-nav-link"
+          >
             Financeiro
-          </a>
+          </button>
         </nav>
       </header>
 
@@ -38,8 +55,32 @@ const HomePage: React.FC = () => {
       <footer className="homepage-footer">
         <p>© 2025 OCLav - Todos os direitos reservados.</p>
       </footer>
-    </div>
-  );
-};
 
-export default HomePage;
+      <Modal
+        isOpen={isClientModalOpen}
+        onClose={() => setClientModalOpen(false)}
+        title="Clientes"
+      >
+        <ClientePage />
+      </Modal>
+
+      <Modal
+        isOpen={isOsModalOpen}
+        onClose={() => setOsModalOpen(false)}
+        title="Ordens de Serviço"
+      >
+        <OsPage />
+      </Modal>
+
+      <Modal
+        isOpen={isFinanceModalOpen}
+        onClose={() => setFinanceModalOpen(false)}
+        title="Financeiro"
+      >
+        <FinancePage />
+      </Modal>
+    </div>
+  )
+}
+
+export default HomePage

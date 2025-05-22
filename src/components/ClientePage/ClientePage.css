@@ -1,0 +1,84 @@
+.container {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 24px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+input[type="text"],
+input[type="number"] {
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-bottom: 8px;
+    width: 100%;
+}
+
+.form-container {
+    margin-bottom: 16px;
+    display: flex;
+    gap: 8px;
+}
+
+.cliente-card {
+    background-color: #fff;
+    padding: 16px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: transform 0.2s;
+}
+
+.cliente-card:hover {
+    transform: translateY(-4px);
+}
+
+.cliente-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.card-section {
+    margin-top: 8px;
+}
+
+ul {
+    padding-left: 16px;
+    margin-top: 8px;
+}
+
+li {
+    margin-bottom: 6px;
+}
+
+.problema {
+    color: red;
+    font-weight: 500;
+}
+
+.sem-produto {
+    font-style: italic;
+    color: #666;
+}

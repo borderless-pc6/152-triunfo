@@ -7,6 +7,10 @@
   flex-direction: column;
 }
 
+.homepage-title {
+  color: #ffffff
+}
+
 .homepage-header {
   background-color: #004080;
   color: #fff;
@@ -42,6 +46,7 @@
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s;
+  cursor: pointer;
 }
 
 .homepage-nav-link:hover {
