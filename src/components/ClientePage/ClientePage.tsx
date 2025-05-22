@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './clientePage.css';
+import './ClientePage.css';
 
 type ProblemaRoupa = {
     descricao: string;
